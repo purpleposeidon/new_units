@@ -1,15 +1,15 @@
 [package]
 name = "new_units"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["neptunepink <purpleposeidon@gmail.com>"]
 edition = "2018"
 license = "MIT/Apache-2.0"
 repository = "https://github.com/purpleposeidon/new_units"
 description = "Make unique types"
-keywords = ["any", "typeid", "dimensional-analysis", "units"]
+keywords = ["any", "typeid", "units"]
 
 [lib]
-path = "./lib.rs"
+path = "./new_units.rs"
 
 [dependencies]
 serde = { version = "1.0", features = ["serde_derive"], optional = true }
