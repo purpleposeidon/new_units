@@ -139,3 +139,16 @@ where
 // FIXME: Ranged indexing
 // FIXME: Vec.len() ?
 // FIXME: IntoIterator/Iter
+
+impl<T, Marker> From<T> for Unit<T, Marker> {
+    fn from(t: T) -> Self {
+        Unit(t, PhantomData)
+    }
+}
+
+#[cfg(test)]
+#[test]
+fn from() {
+    struct Meters;
+    let _: Unit<f32, Meters> = 0.0.into();
+}
